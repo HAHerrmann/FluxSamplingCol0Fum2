@@ -10,3 +10,8 @@
 - RED: Col0 control
 - LIGHT BLUE: *fum2* cold
 - BLUE: Col0 cold
+
+### Files with "ALL" at the end
+
+- contain both proteomic and metabolite assay constraints 
+- reactions which are set by constraints are marked in red
