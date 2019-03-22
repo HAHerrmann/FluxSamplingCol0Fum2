@@ -6,3 +6,6 @@ We used the python package NetworkX to construct the graph from the [Arnold and 
 
 Current shortest pathways to cytosolic fumarate, which break upon removing the link from cytosolic malate to fumarate include: 
 
+![alt text](ShortestPath.png)
+![alt text](ShortestPath1.png)
+![alt text](ShortestPath2.png)
