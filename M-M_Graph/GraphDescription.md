@@ -1,4 +1,4 @@
-Here we have constructed a metabolite-metabolite network for analysing the shortest possible paths to cytosolic fumarate production.
+Here we have constructed a metabolite-metabolite network of the carbon backbone of *Arabidopsis* leaf metabolsim for analysing the shortest possible paths to cytosolic fumarate production.
 
 The method was adapted from the min-path method described by [Ranganathan & Maranas, 2010](https://www.ncbi.nlm.nih.gov/pubmed/20665644). 
 
