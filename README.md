@@ -1,16 +1,23 @@
-# Flux Sampling With Protein Constraints
+# Loopless Flux Sampling With Protein & Metabolite Constraints
 
-## Method 
+Here we apply the CHRR algorithm to do flux sampling of metabolic models of different *Arabidopsis* genotypes exposed to different temperature treatments. 
 
-#### Metabolic Model and Model Constraints 
-* Here we impose constraints obtained from proteomics data on the [Arnold model](https://www.ncbi.nlm.nih.gov/pubmed/24808102)
-* We constraint the model using proteomics data of cold and control conditions of *Arabidopsis thaliana* Col-0 and *fum2* genotypes
-* We conduct flux sampling on the different genotype and temperature models in order to understand the metabolic changes required for cold acclimation 
+## Experimental Data 
+All of the experimental data used for the analyses are provided in the *ExperimentalData* folder. This contains the gas exchange (infrared gas analysis) and metabolite concentration (assay) data in `ExpData.xlsx` and the proteomics data in `ProteinConc.xlsx`. 
 
-#### Feasible Metabolic Pathways 
+## Metabolite-Metabolite Graph
+In order to find feasible metabolic paths from carbon uptake via rubisco to downstream fumarate accumulation we adapted the "min-path" methods outlined by [Ranganathan & Maranas (2010)](https://onlinelibrary.wiley.com/doi/abs/10.1002/biot.201000171) as outlined in `M-M-Graph.ipynb` in the *MetaboMetaboGraph* folder. 
 
-## Results 
+## Flux Sampling 
+We constructed metabolic models for Col-0 (wild-type) and *fum2* *Arabidopsis thaliana* plants (grown in control conditions and grown in control conditions with one week exposure to cold) using adaptations of the [Arnold and Nikoloski (2014) model](https://www.ncbi.nlm.nih.gov/pubmed/24808102). We then constrained the models with diurnal flux data calculated from the gas exchange, metabolite assay, and proteomics data sets as outline in the folder `FluxSampling` following the following analysis pipeline: 
+- `SetUpModel.ipynb` &rightarrow `ConstrainModel.ipynb` &rightarrow `MakeModel.ipynb` to generate the models
+- `ArabidopsisSampling.m` &rightarrow `FluxSamplingAnalysis.ipynb` to generate and analyse flux sampling solutions 
 
-#### Export of chloroplastic PGA or DHAP via TPT are required for cytosolic fumarate production
+## Contact
 
-#### DHAP export shifts to PGA export from the chloroplast under NADPH-limiting conditions 
+- helena.herrmann@manchester.ac.uk
+- giles.johnson@manchester.ac.uk
+
+## Journal Submission
+
+We are currently preparing a journal submission. For the latest DOI of the software please see: <insert Zenodo>.
