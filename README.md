@@ -10,8 +10,8 @@ In order to find feasible metabolic paths from carbon uptake via rubisco to down
 
 ## Flux Sampling 
 We constructed metabolic models for Col-0 (wild-type) and *fum2* *Arabidopsis thaliana* plants (grown in control conditions and grown in control conditions with one week exposure to cold) using adaptations of the [Arnold and Nikoloski (2014) model](https://www.ncbi.nlm.nih.gov/pubmed/24808102). We then constrained the models with diurnal flux data calculated from the gas exchange, metabolite assay, and proteomics data sets as outline in the folder `FluxSampling` following the following analysis pipeline: 
-- `SetUpModel.ipynb` &rightarrow `ConstrainModel.ipynb` &rightarrow `MakeModel.ipynb` to generate the models
-- `ArabidopsisSampling.m` &rightarrow `FluxSamplingAnalysis.ipynb` to generate and analyse flux sampling solutions 
+- `SetUpModel.ipynb` ==> `ConstrainModel.ipynb` ==> `MakeModel.ipynb` to generate the models
+- `ArabidopsisSampling.m` ==> `FluxSamplingAnalysis.ipynb` to generate and analyse flux sampling solutions 
 
 ## Contact
 
@@ -20,4 +20,4 @@ We constructed metabolic models for Col-0 (wild-type) and *fum2* *Arabidopsis th
 
 ## Journal Submission
 
-We are currently preparing a journal submission. For the latest DOI of the software please see: <insert Zenodo>.
+We are currently preparing a journal submission. For the latest DOI of the software please see: *insert Zenodo link*.
