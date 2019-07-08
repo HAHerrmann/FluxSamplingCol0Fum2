@@ -29,3 +29,6 @@ All flux sampling distributions for all of the reaction in each of the models we
 ## Journal Submission
 
 We are currently preparing a journal submission. For the latest DOI of the software please see: *insert Zenodo link*.
+
+## Conference Attendance
+Preliminary results for this work were presentation at the SEB 2019 conference in Seville in a talk titled "Using metabolic modelling to understand the limitations to photosynthesis under changing environmental conditions". 
