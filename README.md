@@ -31,7 +31,7 @@ A summary of the major carbon fluxes is avaiable in the *SupplementaryMaterials*
 
 ## Journal Submission
 
-We are currently preparing a journal submission. For the latest DOI of the software please see: 10.5281/zenodo.3239075 
+We are currently preparing a journal submission. For the latest DOI of the software please see: 10.5281/zenodo.3366934
 
 ## Conference Attendance
 Preliminary results for this work were presentation at the SEB 2019 conference in Seville in a talk titled "Using metabolic modelling to understand the limitations to photosynthesis under changing environmental conditions". 
