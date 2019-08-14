@@ -7,8 +7,8 @@ make_pie <- function(slices,ttle){
   # pct <- round(slices/sum(slices)*100)
   # lbls <- paste(lbls,"\n",pct) # add percents to labels
   # lbls <- paste(lbls,"%",sep="") # ad % to labels 
-  pie(slices, labels = lbls)
-  title(main=ttle,line=-1)
+  pie(slices, labels = lbls,cex=2.5)
+  title(main=ttle,line=-1.5,cex.main=3.0)
 }
 
 col0_control <- c(2.4,4.8,29,0.1,17,46.8)
@@ -28,7 +28,3 @@ make_pie(fum2_cold0,substitute(paste(italic('fum2.1'), " Cold Day 0")))
 
 fum2_cold <- c(18,0,59,0,16,3)
 make_pie(fum2_cold,substitute(paste(italic('fum2.1'), " Cold Day 7")))
-
-
-
-
