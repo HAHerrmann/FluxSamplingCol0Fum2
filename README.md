@@ -18,6 +18,8 @@ We constructed metabolic models for Col-0 (wild-type) and *fum2* *Arabidopsis th
 #### 3.2 Models
 All models with the applied constraints, used for generating the flux sampling results, are available in the *FluxSampling* folder. The original [Arnold and Nikoloski (2014) model](https://www.ncbi.nlm.nih.gov/pubmed/24808102) was adapted to include cyclic electron transport and diurnal storage of malate, fumarate and starch. 
 
+For those who do not wish to access the code, we have provided a list of all metabolic reactions, their identifiers and their set lower and upper bounds. The 4 files (for the two conditions and the two genotypes) can be found in the `FluxSampling` folder of this repository. 
+
 #### 3.3 Results 
 All flux sampling distributions for all of the reaction in each of the models were plotted to pdf files and can be found in the *FluxSampling* folder. 
 
