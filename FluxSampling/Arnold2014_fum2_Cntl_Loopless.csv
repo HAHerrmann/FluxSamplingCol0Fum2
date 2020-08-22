@@ -1,0 +1,553 @@
+PSII_h,4 hnu[h] + 2 PQ[h] + 2 H2O[h] + 4 H[h]  -> 2 PQH2[h] + O2[h] + 4 H[l] ,0,1000
+Cytb6f_h,2 H[h] + PQH2[h] + 2 PCox[h]  -> PQ[h] + 4 H[l] + 2 PCrd[h] ,0,1000
+PSI_h,hnu[h] + PCrd[h] + Fdox[h]  -> PCox[h] + Fdrd[h] ,0,1000
+Fd-NADPR_h,H[h] + 2 Fdrd[h] + NADP[h]  -> 2 Fdox[h] + NADPH[h] ,169.155518338493,179.618746276957
+ATPase_h,14 H[l] + 3 ADP[h] + 3 Pi[h]  -> 3 H2O[h] + 11 H[h] + 3 ATP[h] ,85.5656400000087,90.8583600000093
+RBC_h,H2O[h] + RuBP[h] + CO2[h]  -> 2 H[h] + 2 PGA[h] ,0,1000
+PGAK_h,ATP[h] + PGA[h]  <=> ADP[h] + DPGA[h] ,-150.88,150.88
+GAPDH1_h,H[h] + NADPH[h] + DPGA[h]  -> NADP[h] + Pi[h] + GAP[h] ,0,1000
+TPI_h,GAP[h]  <=> DHAP[h] ,-1000,1000
+FBPA_h,GAP[h] + DHAP[h]  <=> FBP[h] ,-1000,1000
+FBPase_h,H2O[h] + FBP[h]  -> Pi[h] + F6P[h] ,0,1000
+FTK_h,GAP[h] + F6P[h]  <=> E4P[h] + X5P[h] ,-1000,1000
+SBPA_h,DHAP[h] + E4P[h]  -> SBP[h] ,0,1000
+SBPase_h,H2O[h] + SBP[h]  -> Pi[h] + S7P[h] ,0,1000
+STK_h,GAP[h] + S7P[h]  <=> X5P[h] + R5P[h] ,-1000,1000
+Ru5PE_h,X5P[h]  <=> Ru5P[h] ,-1000,1000
+R5PI_h,R5P[h]  <=> Ru5P[h] ,-1000,1000
+Ru5PK_h,ATP[h] + Ru5P[h]  -> H[h] + ADP[h] + RuBP[h] ,0,1000
+PGI_h,F6P[h]  <=> G6P[h] ,-1000,1000
+PGM_h,G6P[h]  <=> G1P[h] ,-36.809,36.809
+AGPase_h,ATP[h] + G1P[h]  -> ADPG[h] + PPi[h] ,0,1000
+StS_h1,H2O[h] + ADPG[h]  -> H[h] + ADP[h] + starch1[h] ,0,1000
+StS_h2,ADPG[h] + starch1[h]  -> H[h] + ADP[h] + starch2[h] ,0,0
+StS_h3,ADPG[h] + starch2[h]  -> H[h] + ADP[h] + starch3[h] ,0,0
+bAMY1_h,H2O[h] + starch5[h]  -> starch3[h] + Mas[h] ,0,0
+bAMY2_h,H2O[h] + starch3[h]  -> starch1[h] + Mas[h] ,0,0
+DPE11_h,2 starch3[h]  -> starch5[h] + Glc[h] ,0,0
+DPE12_h,starch1[h] + Mas[h]  -> starch2[h] + Glc[h] ,0,0
+DPE13_h,starch2[h] + Mas[h]  -> starch3[h] + Glc[h] ,0,0
+DPE2_c,starch1[c] + Mas[c]  -> starch2[c] + Glc[c] ,0,0
+HEXK_c,Glc[c] + ATP[c]  -> G6P[c] + ADP[c] + H[c] ,0,0
+StP1_h,Pi[h] + starch2[h]  -> G1P[h] + starch1[h] ,0,0
+StP21_c,starch2[c] + Pi[c]  -> starch1[c] + G1P[c] ,0,0
+TPI_c,GAP[c]  -> DHAP[c] ,0,0
+FBPA_c,GAP[c] + DHAP[c]  -> FBP[c] ,0,0
+FBPase_c,FBP[c] + H2O[c]  -> Pi[c] + F6P[c] ,0,0
+F6PK2_c,ATP[c] + F6P[c]  -> ADP[c] + H[c] + F26BP[c] ,0,0
+F26BPPh_c,H2O[c] + F26BP[c]  -> Pi[c] + F6P[c] ,0,0
+PGI_c,F6P[c]  -> G6P[c] ,0,0
+PGM_c,G6P[c]  -> G1P[c] ,0,0
+UGPase_c,H[c] + G1P[c] + UTP[c]  -> UDPG[c] + PPi[c] ,0,0
+S6PS_c,F6P[c] + UDPG[c]  -> S6P[c] + UDP[c] ,0,0
+S6PPh_c,H2O[c] + S6P[c]  -> Pi[c] + Suc[c] ,0,0
+SucS_c,UDP[c] + Suc[c]  -> UDPG[c] + Frc[c] ,0,0
+FrcFD_c,H2O[c] + Suc[c]  -> Glc[c] + Frc[c] ,0,0
+FrcK_c,ATP[c] + Frc[c]  -> ADP[c] + H[c] + F6P[c] ,0,0
+TPS_c,G6P[c] + UDPG[c]  -> UDP[c] + T6P[c] ,0,0
+TPP_c,H2O[c] + T6P[c]  -> Pi[c] + Tre[c] ,0,0
+CeS_c1,H2O[c] + UDPG[c]  -> UDP[c] + cellulose1[c] ,0,0
+CeS_c2,UDPG[c] + cellulose1[c]  -> UDP[c] + cellulose2[c] ,0,0
+CeS_c3,UDPG[c] + cellulose2[c]  -> UDP[c] + cellulose3[c] ,0,0
+MalDH1_c,Mal[c] + NAD[c]  <=> OAA[c] + NADH[c] ,-1000,1000
+PEPC1_c,ATP[c] + OAA[c]  -> ADP[c] + PEP[c] + CO2[c] ,0,0
+PEPC2_c,Pi[c] + OAA[c]  <=> PEP[c] + HCO3[c] ,-1000,1000
+Enol_c,H2O[c] + PEP[c]  <=> 2PGA[c] ,-1000,1000
+PGAM_c,2PGA[c]  <=> PGA[c] ,-1000,1000
+PGAK_c,ATP[c] + PGA[c]  <=> ADP[c] + DPGA[c] ,-151.794,151.794
+GAPDH2_c,Pi[c] + GAP[c] + NAD[c]  <=> NADH[c] + DPGA[c] ,-1000,1000
+GAPDH3_c,GAP[c] + H2O[c] + NADP[c]  -> H[c] + PGA[c] + NADPH[c] ,0,0
+F6PK1_c,ATP[c] + F6P[c]  -> ADP[c] + H[c] + FBP[c] ,0,0
+F6PK1_h,ATP[h] + F6P[h]  -> H[h] + ADP[h] + FBP[h] ,0,0
+GAPDH2_h,Pi[h] + GAP[h] + NAD[h]  -> H[h] + DPGA[h] + NADH[h] ,0,0
+PGAM_h,PGA[h]  <=> 2PGA[h] ,-1000,1000
+Enol_h,2PGA[h]  <=> H2O[h] + PEP[h] ,-1000,1000
+PyrK_c,ADP[c] + H[c] + PEP[c]  -> ATP[c] + Pyr[c] ,0,1000
+PyrK_h,H[h] + ADP[h] + PEP[h]  -> ATP[h] + Pyr[h] ,0,0
+PyrDH1_m,Pyr[m] + ThPP[m] + H[m]  -> H-Eth-ThPP[m] + CO2[m] ,0,1000
+PyrDH2_m,H-Eth-ThPP[m] + LPA[m]  -> ThPP[m] + A-DHL[m] ,0,1000
+DHLAcT_m,A-DHL[m] + CoA[m]  -> A-CoA[m] + DHL[m] ,0,1000
+DHLDH2_m,DHL[m] + NAD[m]  -> H[m] + LPA[m] + NADH[m] ,0,1000
+CitS_m,A-CoA[m] + OAA[m] + H2O[m]  -> H[m] + CoA[m] + Cit[m] ,0,1000
+cACNDHA_m,Cit[m]  -> H2O[m] + cACN[m] ,0,0
+cACNHA_m,H2O[m] + cACN[m]  -> iCit[m] ,0,0
+iCitDHNAD_m,NAD[m] + iCit[m]  -> CO2[m] + NADH[m] + KG[m] ,0,0
+KGDH_m,H[m] + LPA[m] + KG[m]  -> CO2[m] + S-DHL[m] ,0,0
+DHLST_m,CoA[m] + S-DHL[m]  -> DHL[m] + S-CoA[m] ,0,0
+SCACoAL_m,S-CoA[m] + ADP[m] + Pi[m]  -> CoA[m] + SCA[m] + ATP[m] ,0,0
+cplx2_m,SCA[m] + Q[m]  -> Fum[m] + QH2[m] ,0,1000
+FumHA_m,H2O[m] + Fum[m]  -> Mal[m] ,0,1000
+MalDH1_m,NAD[m] + Mal[m]  <=> H[m] + NADH[m] + OAA[m] ,-31.637,31.637
+cplx1_m,5 H[m] + NADH[m] + Q[m]  -> NAD[m] + QH2[m] + 4 H[i] ,0,1000
+cplx3_m,2 H[m] + QH2[m] + 2 Cytcox[m]  -> Q[m] + 4 H[i] + 2 Cytcrd[m] ,0,1000
+cplx4_m,8 H[m] + 4 Cytcrd[m] + O2[m]  -> 2 H2O[m] + 4 H[i] + 4 Cytcox[m] ,0,1000
+cplx5_m,ADP[m] + Pi[m] + 4 H[i]  <=> 3 H[m] + H2O[m] + ATP[m] ,-1000,1000
+RBO_h,O2[h] + RuBP[h]  -> 2 H[h] + PGA[h] + PGCA[h] ,0,0
+PGP_h,H2O[h] + PGCA[h]  -> Pi[h] + GCA[h] ,0,0
+GCAO_p,GCA[p] + O2[p]  -> GLX[p] + H2O2[p] ,0,0
+CAT_p,2 H2O2[p]  -> O2[p] + 2 H2O[p] ,0,0
+GGAT_p,GLX[p] + Glu[p]  -> Gly[p] + KG[p] ,0,0
+GlyDH_m,H[m] + Gly[m] + LPL[m]  -> CO2[m] + amDHP[m] ,0,0
+AMT_m,amDHP[m] + THF[m]  -> DHP[m] + M-THF[m] + NH4[m] ,0,0
+DHLDH1_m,NAD[m] + DHP[m]  -> H[m] + NADH[m] + LPL[m] ,0,0
+GlyHMT_m,H2O[m] + Gly[m] + M-THF[m]  -> THF[m] + Ser[m] ,0,0
+SGAT_p,GLX[p] + Ser[p]  -> Gly[p] + HPR[p] ,0,0
+GCEADH_p,HPR[p] + NADH[p] + H[p]  -> GCEA[p] + NAD[p] ,0,0
+MalDH1_p,NAD[p] + Mal[p]  -> NADH[p] + H[p] + OAA[p] ,0,0
+GCEAK_h,ATP[h] + GCEA[h]  -> H[h] + ADP[h] + PGA[h] ,0,0
+G6PDH_h,NADP[h] + G6P[h]  -> H[h] + NADPH[h] + GLP[h] ,0,0
+6PGL_h,H2O[h] + GLP[h]  -> H[h] + 6PG[h] ,0,0
+6PGDHNAD_h,NAD[h] + 6PG[h]  <=> CO2[h] + Ru5P[h] + NADH[h] ,-8.948,8.948
+6PGDHNADP_h,NADP[h] + 6PG[h]  <=> NADPH[h] + CO2[h] + Ru5P[h] ,-8.948,8.948
+TA_h,GAP[h] + S7P[h]  -> F6P[h] + E4P[h] ,0,0
+DAHPS_h,H2O[h] + E4P[h] + PEP[h]  -> Pi[h] + DAHP[h] ,0,0
+DHQS_h,DAHP[h]  -> Pi[h] + DHQ[h] ,0,0
+DHQDH_h,DHQ[h]  -> H2O[h] + DHS[h] ,0,0
+SADH_h,H[h] + NADPH[h] + DHS[h]  -> NADP[h] + SA[h] ,0,0
+SAK_h,ATP[h] + SA[h]  -> H[h] + ADP[h] + S3P[h] ,0,0
+EPSPS_h,PEP[h] + S3P[h]  -> Pi[h] + EPSP[h] ,0,0
+CHRS_h,EPSP[h]  -> Pi[h] + CHR[h] ,0,0
+R5PDPK_h,ATP[h] + R5P[h]  -> H[h] + PRPP[h] + AMP[h] ,0,0
+PyrPiDK_h,Pi[h] + ATP[h] + Pyr[h]  <=> 2 H[h] + PPi[h] + PEP[h] + AMP[h] ,-4.578,4.578
+MalDH2NADP_c,H[c] + Mal[c] + NADP[c]  -> CO2[c] + NADPH[c] + Pyr[c] ,0,0
+MalDH2NADP_h,NADP[h] + Mal[h]  -> NADPH[h] + CO2[h] + Pyr[h] ,0,0
+MalDH1_h,NAD[h] + Mal[h]  -> H[h] + NADH[h] + OAA[h] ,0,0
+MalDH3_c,OAA[c] + NADPH[c]  -> Mal[c] + NADP[c] ,0,9.475
+MalDH3_h,H[h] + NADPH[h] + OAA[h]  -> NADP[h] + Mal[h] ,0,0
+MalDH3_m,H[m] + OAA[m] + NADPH[m]  -> Mal[m] + NADP[m] ,0,0
+CitS_c,H2O[c] + OAA[c] + A-CoA[c]  -> H[c] + Cit[c] + CoA[c] ,0,0
+CitS_h,H2O[h] + OAA[h] + A-CoA[h]  -> H[h] + Cit[h] + CoA[h] ,0,0
+cACNDHA_c,Cit[c]  -> H2O[c] + cACN[c] ,0,1000
+cACNDHA_h,Cit[h]  -> H2O[h] + cACN[h] ,0,0
+cACNHA_c,H2O[c] + cACN[c]  -> iCit[c] ,0,1000
+cACNHA_h,H2O[h] + cACN[h]  -> iCit[h] ,0,0
+iCitDHNAD_c,H[c] + NAD[c] + iCit[c]  -> NADH[c] + CO2[c] + KG[c] ,0,1000
+iCitDHNADP_c,H[c] + NADP[c] + iCit[c]  -> CO2[c] + NADPH[c] + KG[c] ,0,0
+iCitDHNADP_h,NADP[h] + iCit[h]  -> NADPH[h] + CO2[h] + KG[h] ,0,0
+iCitDHNADP_m,iCit[m] + NADP[m]  -> CO2[m] + KG[m] + NADPH[m] ,0,0
+iCitL_c,iCit[c]  -> GLX[c] + SCA[c] ,0,1000
+MalS_c,H2O[c] + A-CoA[c] + GLX[c]  -> H[c] + Mal[c] + CoA[c] ,0,1000
+ATPCitL_c,ATP[c] + Cit[c] + CoA[c]  -> ADP[c] + Pi[c] + OAA[c] + A-CoA[c] ,0,1000
+ACoAS_h,ATP[h] + CoA[h] + AC[h]  -> H[h] + PPi[h] + AMP[h] + A-CoA[h] ,0,37.141
+ACoAC_h,ATP[h] + A-CoA[h] + HCO3[h]  -> H[h] + ADP[h] + Pi[h] + M-CoA[h] ,0,1000
+ACPM_h,M-CoA[h] + ACP[h]  -> CoA[h] + M-ACP[h] ,0,0.708
+PPiase_h,H2O[h] + PPi[h]  -> 2 Pi[h] ,0,27.13
+PPIase_c,H2O[c] + PPi[c]  -> H[c] + 2 Pi[c] ,0,0
+PPIF6PK_c,F6P[c] + PPi[c]  -> H[c] + Pi[c] + FBP[c] ,0,0
+ForDH_h,CO2[h] + NADH[h]  -> NAD[h] + For[h] ,0,0
+ForTHFL_h,H[h] + ATP[h] + For[h] + THF[h]  -> ADP[h] + Pi[h] + F-THF[h] ,0,0
+DHFR_c,NADPH[c] + DHF[c]  -> NADP[c] + THF[c] ,0,0
+TRXR_c,NADPH[c] + TRXox[c]  -> NADP[c] + TRXrd[c] ,0,0
+ADNK_c,ATP[c] + ADN[c]  -> ADP[c] + H[c] + AMP[c] ,0,0
+ADNN_c,H2O[c] + ADN[c]  -> H[c] + Rib[c] + AD[c] ,0,0
+ADPRPPT_c,AD[c] + PRPP[c]  -> PPi[c] + AMP[c] ,0,0
+RibK_h,ATP[h] + Rib[h]  -> H[h] + ADP[h] + R5P[h] ,0,0
+NO3R1_c,NADH[c] + NO3[c]  -> H2O[c] + NAD[c] + NO2[c] ,0,0
+NO3R2_c,NADPH[c] + NO3[c]  <=> H2O[c] + NADP[c] + NO2[c] ,-1000,1000
+NO2R_h,8 H[h] + 6 Fdrd[h] + NO2[h]  -> 2 H2O[h] + 6 Fdox[h] + NH4[h] ,0,20.059
+ATPSL_h,ATP[h] + SO4[h]  -> PPi[h] + APS[h] ,0,1000
+APSR_h,APS[h] + 2 GSH[h]  -> H[h] + AMP[h] + SO3[h] + GSSG[h] ,0,1000
+GSSGR_h,H[h] + NADPH[h] + GSSG[h]  -> NADP[h] + 2 GSH[h] ,0,1000
+SO3R_h,7 H[h] + 3 Fdrd[h] + SO3[h]  -> 3 H2O[h] + 3 Fdox[h] + H2S[h] ,0,19.858
+HCO3DHA_c,H2O[c] + CO2[c]  -> H[c] + HCO3[c] ,0,1000
+HCO3DHA_h,H2O[h] + CO2[h]  -> H[h] + HCO3[h] ,0,1000
+AlaTA_h,Pyr[h] + Glu[h]  <=> KG[h] + Ala[h] ,-52.031,52.031
+AlaTA_m,Pyr[m] + Glu[m]  <=> KG[m] + Ala[m] ,-16.706,16.706
+AlaTA_p,Glu[p] + Pyr[p]  <=> KG[p] + Ala[p] ,-37.857,37.857
+AGluK,ATP[h] + A-Glu[h]  -> ADP[h] + A-GluP[h] ,0,0
+AGluPR_h,H[h] + NADPH[h] + A-GluP[h]  -> NADP[h] + Pi[h] + A-Glu-SeA[h] ,0,0
+AOrnTA_h,Glu[h] + A-Glu-SeA[h]  -> KG[h] + A-Orn[h] ,0,0
+AOrnAGluAcT_h,Glu[h] + A-Orn[h]  -> A-Glu[h] + Orn[h] ,0,0
+CBPS_h,H2O[h] + 2 ATP[h] + HCO3[h] + Gln[h]  -> 3 H[h] + 2 ADP[h] + Pi[h] + Glu[h] + CBP[h] ,0,0
+OrnCMT_h,H[h] + Orn[h] + CBP[h]  -> Pi[h] + CTL[h] ,0,0
+ArgSCAS_h,ATP[h] + CTL[h] + Asp[h]  -> 3 H[h] + PPi[h] + AMP[h] + Arg-SCA[h] ,0,0
+ArgSCAL_h,Arg-SCA[h]  -> Arg[h] + Fum[h] ,0,0
+FumHA_c,Mal[c]  -> H2O[c] + Fum[c] ,0,0
+AsnS_c,ATP[c] + H2O[c] + Gln[c] + Asp[c]  -> H[c] + PPi[c] + AMP[c] + Glu[c] + Asn[c] ,0,0
+AspAT_c,OAA[c] + Glu[c]  <=> KG[c] + Asp[c] ,-1000,1000
+AspAT_h,OAA[h] + Glu[h]  -> KG[h] + Asp[h] ,0,0
+AspAT_m,OAA[m] + Glu[m]  -> KG[m] + Asp[m] ,0,0
+AspAT_p,Glu[p] + OAA[p]  <=> KG[p] + Asp[p] ,-5.714,5.714
+Asnase_c,H2O[c] + Asn[c]  -> Asp[c] + NH4[c] ,0,0
+SerAcT_c,A-CoA[c] + Ser[c]  -> CoA[c] + A-Ser[c] ,0,0
+SerAcT_h,A-CoA[h] + Ser[h]  -> CoA[h] + A-Ser[h] ,0,0
+SerAcT_m,A-CoA[m] + Ser[m]  -> CoA[m] + A-Ser[m] ,0,1000
+CysS_c,A-Ser[c] + H2S[c]  -> H[c] + Cys[c] + AC[c] ,0,0
+CysS_h,H2S[h] + A-Ser[h]  -> H[h] + AC[h] + Cys[h] ,0,0
+CysS_m,A-Ser[m] + H2S[m]  -> H[m] + Cys[m] + AC[m] ,0,1000
+GluSNADP_h,H[h] + NADPH[h] + KG[h] + Gln[h]  <=> NADP[h] + 2 Glu[h] ,-9.407,9.407
+GluDH3NADP_c,H2O[c] + NADP[c] + Glu[c]  <=> NADPH[c] + KG[c] + NH4[c] ,-1000,1000
+Glnase_c,H2O[c] + Gln[c]  -> Glu[c] + NH4[c] ,0,0
+GluSNAD_h,H[h] + NADH[h] + KG[h] + Gln[h]  -> NAD[h] + 2 Glu[h] ,0,9.407
+GluSFd_h,2 H[h] + 2 Fdrd[h] + KG[h] + Gln[h]  -> 2 Fdox[h] + 2 Glu[h] ,0,109.225
+GluDH1NAD_m,H[m] + NADH[m] + KG[m] + NH4[m]  -> NAD[m] + H2O[m] + Glu[m] ,0,1000
+GluDH1NADP_m,H[m] + KG[m] + NH4[m] + NADPH[m]  <=> H2O[m] + NADP[m] + Glu[m] ,-1000,1000
+GluDH2NAD_m,NAD[m] + H2O[m] + Glu[m]  -> H[m] + NADH[m] + KG[m] + NH4[m] ,0,0
+GluDC_c,H[c] + Glu[c]  -> CO2[c] + GABA[c] ,0,0
+GABATA1_m,Pyr[m] + GABA[m]  -> Ala[m] + SCA-SeA[m] ,0,0
+GABATA2_m,KG[m] + GABA[m]  -> Glu[m] + SCA-SeA[m] ,0,0
+SCASeADH_m,NAD[m] + H2O[m] + SCA-SeA[m]  -> 2 H[m] + NADH[m] + SCA[m] ,0,0
+GlnS_c,ATP[c] + Glu[c] + NH4[c]  -> ADP[c] + H[c] + Pi[c] + Gln[c] ,0,0
+GlnS_h,ATP[h] + NH4[h] + Glu[h]  -> H[h] + ADP[h] + Pi[h] + Gln[h] ,0,1000
+GlnS_m,ATP[m] + NH4[m] + Glu[m]  -> H[m] + ADP[m] + Pi[m] + Gln[m] ,0,0
+ThrA_c,Thr[c]  -> ACD[c] + Gly[c] ,0,0
+ACDOxRed_c,H2O[c] + NAD[c] + ACD[c]  -> H[c] + NADH[c] + AC[c] ,0,0
+GCAO_h,O2[h] + GCA[h]  -> GLX[h] + H2O2[h] ,0,0
+CAT_h,2 H2O2[h]  -> 2 H2O[h] + O2[h] ,0,0
+SGAT_h,Ser[h] + GLX[h]  -> Gly[h] + HPR[h] ,0,0
+GCEADH_h,H[h] + NADH[h] + HPR[h]  -> NAD[h] + GCEA[h] ,0,0
+GGAT_h,Glu[h] + GLX[h]  -> KG[h] + Gly[h] ,0,0
+ATPPRT_h,ATP[h] + PRPP[h]  -> H[h] + PPi[h] + PR-ATP[h] ,0,0
+PrATPDP_h,H2O[h] + PR-ATP[h]  -> 2 H[h] + PPi[h] + PR-AMP[h] ,0,0
+PrAMPCy_h,H2O[h] + PR-AMP[h]  -> P-AICAR-P[h] ,0,0
+PAICARPI_h,P-AICAR-P[h]  -> Pu-AICAR-P[h] ,0,0
+IGPS_h,Gln[h] + Pu-AICAR-P[h]  -> Glu[h] + EIGP[h] + AICAR[h] ,0,0
+IGPDA_h,EIGP[h]  -> H2O[h] + IA-P[h] ,0,0
+HisolPTA_h,Glu[h] + IA-P[h]  -> KG[h] + Hisol-P[h] ,0,0
+HisolPP_h,H2O[h] + Hisol-P[h]  -> Pi[h] + Hisol[h] ,0,0
+HisolPDH_h,NAD[h] + Hisol[h]  -> 2 H[h] + NADH[h] + Hisal[h] ,0,0
+HisalPDH_h,H2O[h] + NAD[h] + Hisal[h]  -> H[h] + NADH[h] + His[h] ,0,0
+ThrDA_h,Thr[h]  -> NH4[h] + OB[h] ,0,0
+ALS1_h,H[h] + Pyr[h] + ThPP[h]  -> CO2[h] + H-Eth-ThPP[h] ,0,0
+ALS2_h,OB[h] + H-Eth-ThPP[h]  -> ThPP[h] + AHB[h] ,0,0
+KARI1_h,AHB[h]  -> HMOP[h] ,0,0
+KARI2_h,H[h] + NADPH[h] + HMOP[h]  -> NADP[h] + DHMP[h] ,0,0
+DHADA1_h,DHMP[h]  -> H2O[h] + MOP[h] ,0,0
+BAATA1_h,Glu[h] + MOP[h]  -> KG[h] + Ile[h] ,0,0
+ALS3_h,Pyr[h] + H-Eth-ThPP[h]  -> ThPP[h] + AL[h] ,0,0
+KARI3_h,AL[h]  -> HMOB[h] ,0,0
+KARI4_h,H[h] + NADPH[h] + HMOB[h]  -> NADP[h] + DHMB[h] ,0,0
+DHADA2_h,DHMB[h]  -> H2O[h] + MOB[h] ,0,0
+2IPMS_h,H2O[h] + A-CoA[h] + MOB[h]  -> H[h] + CoA[h] + 2IPM[h] ,0,0
+3IPMDA1_h,2IPM[h]  -> H2O[h] + IPM[h] ,0,0
+3IPMDA2_h,H2O[h] + IPM[h]  -> 3IPM[h] ,0,0
+3IPMDH_h,NAD[h] + 3IPM[h]  -> H[h] + NADH[h] + IPO[h] ,0,0
+IPODC_h,H[h] + IPO[h]  -> CO2[h] + 4MOP[h] ,0,0
+BAATA2_h,Glu[h] + 4MOP[h]  -> KG[h] + Leu[h] ,0,0
+AspK_h,ATP[h] + Asp[h]  -> ADP[h] + AspP[h] ,0,0
+Asp-SeADH_h,H[h] + NADPH[h] + AspP[h]  -> NADP[h] + Pi[h] + Asp-SeA[h] ,0,0
+DHDS_h,Pyr[h] + Asp-SeA[h]  -> 2 H2O[h] + H[h] + DHD[h] ,0,0
+DHDRNAD_h,H[h] + NADH[h] + DHD[h]  -> NAD[h] + THD[h] ,0,0
+DHDRNADP_h,H[h] + NADPH[h] + DHD[h]  -> NADP[h] + THD[h] ,0,0
+DAPAT_h,H2O[h] + H[h] + Glu[h] + THD[h]  -> KG[h] + DAP[h] ,0,0
+DAPE_h,DAP[h]  -> mDAP[h] ,0,0
+DAPDC_h,H[h] + mDAP[h]  -> CO2[h] + Lys[h] ,0,0
+HSerDHNADP_h,H[h] + NADPH[h] + Asp-SeA[h]  -> NADP[h] + H-Ser[h] ,0,0
+HSerDHNAD_h,H[h] + NADH[h] + Asp-SeA[h]  -> NAD[h] + H-Ser[h] ,0,0
+HSerK_h,ATP[h] + H-Ser[h]  -> H[h] + ADP[h] + PH-Ser[h] ,0,0
+CTHS_h,Cys[h] + PH-Ser[h]  -> Pi[h] + CTH[h] ,0,0
+CTHL_h,H2O[h] + CTH[h]  -> Pyr[h] + NH4[h] + H-Cys[h] ,0,0
+5M-THFor_c,NADH[c] + M-THF[c]  -> NAD[c] + 5M-THF[c] ,0,0
+MetS_c,5M-THF[c] + H-Cys[c]  -> THF[c] + Met[c] ,0,0
+GlyHMT_c,H2O[c] + Gly[c] + M-THF[c]  -> THF[c] + Ser[c] ,0,0
+MetAdT_h,ATP[c] + H2O[c] + Met[c]  -> H[c] + Pi[c] + PPi[c] + aMet[c] ,0,0
+HCysMT_c,H-Cys[c] + aMet[c]  -> Met[c] + aH-Cys[c] ,0,0
+Cysase_c,H2O[c] + aH-Cys[c]  -> ADN[c] + H-Cys[c] ,0,0
+CHRM_c,CHR[h]  -> PRE[h] ,0,0
+GPAT_h,Glu[h] + PRE[h]  -> KG[h] + AGN[h] ,0,0
+AGNDA_h,H[h] + AGN[h]  -> H2O[h] + CO2[h] + Phe[h] ,0,0
+Arginase_m,H[m] + H2O[m] + Arg[m]  -> Orn[m] + urea[m] ,0,0
+Urease_m,H[m] + H2O[m] + urea[m]  -> CO2[m] + 2 NH4[m] ,0,0
+OrnAT_m,KG[m] + Orn[m]  -> Glu[m] + Glu-SeA[m] ,0,0
+GluK_c,ATP[c] + Glu[c]  -> ADP[c] + GluP[c] ,0,0
+GluK_h,ATP[h] + Glu[h]  -> ADP[h] + GluP[h] ,0,7.864
+GluK_m,ATP[m] + Glu[m]  -> ADP[m] + GluP[m] ,0,0
+GluSeADH_c,NADPH[c] + GluP[c]  -> Pi[c] + NADP[c] + Glu-SeA[c] ,0,0
+GluSeADH_h,H[h] + NADPH[h] + GluP[h]  -> NADP[h] + Pi[h] + Glu-SeA[h] ,0,7.864
+GluSeADH_m,H[m] + NADPH[m] + GluP[m]  -> Pi[m] + NADP[m] + Glu-SeA[m] ,0,0
+GluSeADA_c,Glu-SeA[c]  -> H[c] + H2O[c] + P5C[c] ,0,0
+GluSeADA_h,Glu-SeA[h]  -> H2O[h] + H[h] + P5C[h] ,0,1000
+GluSeADA_m,Glu-SeA[m]  -> H[m] + H2O[m] + P5C[m] ,0,0
+P5CRNAD_c,H[c] + NADH[c] + P5C[c]  -> NAD[c] + Pro[c] ,0,1000
+ProDHNAD_m,NAD[m] + Pro[m]  -> 2 H[m] + NADH[m] + P5C[m] ,0,1000
+ProDHNADP_m,NADP[m] + Pro[m]  -> 2 H[m] + NADPH[m] + P5C[m] ,0,0
+P5CDHNAD_h,2 H2O[h] + NAD[h] + P5C[h]  -> H[h] + NADH[h] + Glu[h] ,0,0
+P5CDHNAD_m,NAD[m] + 2 H2O[m] + P5C[m]  -> H[m] + NADH[m] + Glu[m] ,0,2.143
+P5CDHNADP_m,2 H2O[m] + NADP[m] + P5C[m]  -> H[m] + NADPH[m] + Glu[m] ,0,2.143
+PGADH_h,PGA[h] + NAD[h]  -> H[h] + NADH[h] + P-HPR[h] ,0,0
+PSerAT_h,Glu[h] + P-HPR[h]  -> KG[h] + PSer[h] ,0,0
+PSerP_h,H2O[h] + PSer[h]  -> Pi[h] + Ser[h] ,0,0
+SerRM_c,Ser[c]  -> Pyr[c] + NH4[c] ,0,1000
+ThrS_h,H2O[h] + PH-Ser[h]  -> Pi[h] + Thr[h] ,0,0
+ANTS_h,CHR[h] + Gln[h]  -> H[h] + Pyr[h] + Glu[h] + ANT[h] ,0,0
+ANTPRT_h,PRPP[h] + ANT[h]  -> H[h] + PPi[h] + PR-ANT[h] ,0,0
+PRANTI_h,PR-ANT[h]  -> CPD-Ru5P[h] ,0,0
+IndGPS_h,H[h] + CPD-Ru5P[h]  -> H2O[h] + CO2[h] + Ind-GP[h] ,0,0
+IndGPL_h,Ind-GP[h]  -> GAP[h] + Ind[h] ,0,0
+TrpS_h,Ser[h] + Ind[h]  -> H2O[h] + Trp[h] ,0,0
+AGNDH_h,NADP[h] + AGN[h]  -> NADPH[h] + CO2[h] + Tyr[h] ,0,0
+BAATA3_h,Glu[h] + MOB[h]  -> KG[h] + Val[h] ,0,0
+ATase_h,H2O[h] + PRPP[h] + Gln[h]  -> H[h] + PPi[h] + Glu[h] + PRA[h] ,0,0
+PRAGlyL_h,ATP[h] + Gly[h] + PRA[h]  -> H[h] + ADP[h] + Pi[h] + GAR[h] ,0,0
+GARFT_h,F-THF[h] + GAR[h]  -> 2 H[h] + THF[h] + FGAR[h] ,0,0
+FGAMS_h,H2O[h] + ATP[h] + Gln[h] + FGAR[h]  -> 2 H[h] + ADP[h] + Pi[h] + Glu[h] + FGAM[h] ,0,0
+FGAMCL_h,ATP[h] + FGAM[h]  -> H[h] + ADP[h] + Pi[h] + AIR[h] ,0,0
+AIRC_h,CO2[h] + AIR[h]  -> H[h] + CAIR[h] ,0,0
+SAICARS_h,ATP[h] + Asp[h] + CAIR[h]  -> H[h] + ADP[h] + Pi[h] + SAICAR[h] ,0,0
+DCAMPL1_h,H[h] + SAICAR[h]  -> Fum[h] + AICAR[h] ,0,0
+AICARFT_h,F-THF[h] + AICAR[h]  -> 2 H[h] + THF[h] + FAICAR[h] ,0,0
+IMPCH_h,FAICAR[h]  -> H2O[h] + IMP[h] ,0,0
+AMPDA_c,H[c] + H2O[c] + AMP[c]  -> NH4[c] + IMP[c] ,0,0
+IMPDH_c,H2O[c] + NAD[c] + IMP[c]  -> NADH[c] + XMP[c] ,0,0
+GMPS_c,ATP[c] + H2O[c] + Gln[c] + XMP[c]  -> H[c] + PPi[c] + AMP[c] + Glu[c] + GMP[c] ,0,0
+DCAMPS_h,Asp[h] + IMP[h] + GTP[h]  -> H[h] + Pi[h] + DC-AMP[h] + GDP[h] ,0,0
+DCAMPL2_h,DC-AMP[h]  -> AMP[h] + Fum[h] ,0,0
+AspCT_h,CBP[h] + Asp[h]  -> Pi[h] + CB-Asp[h] ,0,0
+DHOase_h,CB-Asp[h]  -> H2O[h] + DHO[h] ,0,0
+DHODH_m,H[m] + Q[m] + DHO[m]  -> QH2[m] + orO[m] ,0,0
+orOPRT_c,PRPP[c] + orO[c]  -> H[c] + PPi[c] + OMP[c] ,0,0
+OMPDC_c,H[c] + OMP[c]  -> CO2[c] + UMP[c] ,0,0
+CTPS_c,ATP[c] + H2O[c] + UTP[c] + Gln[c]  -> ADP[c] + 2 H[c] + Pi[c] + Glu[c] + CTP[c] ,0,0
+AMPK_c,ATP[c] + AMP[c]  -> 2 ADP[c] ,0,1000
+AMPK_h,ATP[h] + AMP[h]  -> 2 ADP[h] ,0,1000
+GMPK_c,ATP[c] + H[c] + GMP[c]  -> ADP[c] + GDP[c] ,0,0
+NMPK_c,ATP[c] + H[c] + UMP[c]  -> ADP[c] + UDP[c] ,0,0
+CTPP_c,H2O[c] + CTP[c]  -> Pi[c] + CDP[c] ,0,0
+ADPR_c,ADP[c] + H[c] + TRXrd[c]  -> H2O[c] + TRXox[c] + dADP[c] ,0,0
+CDPR_c,TRXrd[c] + CDP[c]  -> H2O[c] + TRXox[c] + dCDP[c] ,0,0
+GDPR_c,TRXrd[c] + GDP[c]  -> H2O[c] + TRXox[c] + dGDP[c] ,0,0
+UDPR_c,UDP[c] + TRXrd[c]  -> H2O[c] + TRXox[c] + dUDP[c] ,0,0
+dUTPP_c,H2O[c] + dUTP[c]  -> 2 H[c] + PPi[c] + dUMP[c] ,0,0
+dTMPS_c,M-THF[c] + dUMP[c]  -> DHF[c] + dTMP[c] ,0,0
+dTMPK_c,ATP[c] + H[c] + dTMP[c]  -> ADP[c] + dTDP[c] ,0,0
+GDPK_c,ATP[c] + GDP[c]  -> ADP[c] + H[c] + GTP[c] ,0,0
+GDPK_h,ATP[h] + GDP[h]  -> H[h] + ADP[h] + GTP[h] ,0,0
+UDPK_c,ATP[c] + UDP[c]  -> ADP[c] + H[c] + UTP[c] ,0,0
+dADPK_c,ATP[c] + dADP[c]  -> ADP[c] + dATP[c] ,0,0
+dCDPK_c,ATP[c] + dCDP[c]  -> ADP[c] + dCTP[c] ,0,0
+dGDPK_c,ATP[c] + dGDP[c]  -> ADP[c] + dGTP[c] ,0,0
+dTDPK_c,ATP[c] + dTDP[c]  -> ADP[c] + dTTP[c] ,0,0
+dUDPK_c,ATP[c] + dUDP[c]  -> ADP[c] + dUTP[c] ,0,0
+Tr_SO4,SO4[c]  <=> SO4[h] ,-1000,1000
+Tr_NO2,NO2[c]  -> NO2[h] ,0,1000
+Tr_NTT,ADP[h] + Pi[h] + ATP[c]  -> ATP[h] + ADP[c] + Pi[c] ,0,0
+Tr_AAC,ADP[c] + Pi[c] + ATP[m]  -> ATP[c] + ADP[m] + Pi[m] ,0,1000
+Tr_BT11,AMP[h]  -> AMP[c] ,0,0
+Tr_BT12,ADP[h]  -> ADP[c] ,0,0
+Tr_BT13,ATP[h]  -> ATP[c] ,0,1000
+Tr_NDT1,NAD[c] + AMP[h]  <=> NAD[h] + AMP[c] ,-1000,1000
+Tr_NDT2,ADP[h] + NAD[c]  <=> ADP[c] + NAD[h] ,-1000,1000
+Tr_TPT1,PGA[h] + Pi[c]  -> Pi[h] + PGA[c] ,0.01,1000
+Tr_TPT2,GAP[h] + Pi[c]  -> Pi[h] + GAP[c] ,0.01,1000
+Tr_TPT3,DHAP[h] + Pi[c]  -> Pi[h] + DHAP[c] ,0,0
+Tr_PPT,Pi[h] + PEP[c]  -> Pi[c] + PEP[h] ,0,0
+Tr_GCA1,GCA[h]  -> GCA[c] ,0,0
+Tr_GCEA1,GCEA[c]  -> GCEA[h] ,0,0
+Tr_GPT1,Pi[h] + G6P[c]  -> G6P[h] + Pi[c] ,0,0
+Tr_pGlc,Glc[h]  -> Glc[c] ,0,0
+Tr_Mex1,Mas[h]  -> Mas[c] ,0,0
+Tr_PLT5,Rib[c]  -> Rib[h] ,0,0
+Tr_DIC1,Mal[c] + Pi[m]  -> Pi[c] + Mal[m] ,0,0
+Tr_DIC2,Pi[m] + SCA[c]  -> Pi[c] + SCA[m] ,0,0
+Tr_DIT1,Mal[h] + KG[c]  -> Mal[c] + KG[h] ,0,0
+Tr_DIT2,Mal[c] + Glu[h]  -> Mal[h] + Glu[c] ,0,0
+Tr_DTC1A,Cit[m] + KG[c]  -> KG[m] + Cit[c] ,0,0
+Tr_DTC1B,iCit[m] + KG[c]  -> KG[m] + iCit[c] ,0,0
+Tr_DTC1C,cACN[m] + KG[c]  <=> KG[m] + cACN[c] ,-1000,1000
+Tr_DTC2A,Mal[c] + Cit[m]  <=> Mal[m] + Cit[c] ,-1000,1000
+Tr_DTC2B,Mal[c] + iCit[m]  -> Mal[m] + iCit[c] ,0,0
+Tr_DTC2C,Mal[c] + cACN[m]  -> Mal[m] + cACN[c] ,0,0
+Tr_DTC3A,OAA[c] + Cit[m]  <=> OAA[m] + Cit[c] ,-1000,1000
+Tr_DTC3B,OAA[c] + iCit[m]  -> OAA[m] + iCit[c] ,0,0
+Tr_DTC3C,OAA[c] + cACN[m]  <=> OAA[m] + cACN[c] ,-1000,1000
+Tr_DTC4A,Cit[m] + SCA[c]  <=> SCA[m] + Cit[c] ,-1000,1000
+Tr_DTC4B,iCit[m] + SCA[c]  -> SCA[m] + iCit[c] ,0,0
+Tr_DTC4C,cACN[m] + SCA[c]  -> SCA[m] + cACN[c] ,0,0
+Tr_SFC,Fum[m] + SCA[c]  -> SCA[m] + Fum[c] ,0,0
+Tr_BAT11,Ala[c]  <=> Ala[m] ,-1000,1000
+Tr_BAT12,Arg[c]  -> Arg[m] ,0,0
+Tr_BAT13,Glu[c]  -> Glu[m] ,0,0
+Tr_BAT14,Lys[c]  -> Lys[m] ,0,0
+Tr_BAT15,GABA[c]  -> GABA[m] ,0,0
+Tr_BAC1,Arg[c] + His[m]  -> Arg[m] + His[c] ,0,0
+Tr_BAC2,Arg[c] + Lys[m]  -> Arg[m] + Lys[c] ,0,0
+Tr_ProU,Pro[c]  -> Pro[m] ,0,1000
+Tr_ProA,Glu[m] + Pro[c]  -> Glu[c] + Pro[m] ,0,1000
+Tr_P5C1,P5C[h]  -> P5C[c] ,0,1000
+Tr_P5C2,P5C[m]  -> P5C[c] ,0,1000
+Tr_PRPP,H[h] + PRPP[h]  -> PRPP[c] ,0,0
+Tr_Fum,Fum[h]  -> Fum[c] ,0,0
+Tr_HCys,H-Cys[h]  -> H-Cys[c] ,0,0
+Tr_orO,orO[m]  -> orO[c] ,0,0
+Tr_DHO1,DHO[h]  -> DHO[c] ,0,0
+Tr_DHO2,DHO[c]  -> DHO[m] ,0,0
+Tr_GlySer,Ser[m] + Gly[c]  -> Gly[m] + Ser[c] ,0,0
+Tr_O2h,O2[c]  <=> O2[h] ,-1000,1000
+Tr_O2m,O2[c]  <=> O2[m] ,-1000,1000
+Tr_O2p,O2[c]  -> O2[p] ,0,0
+Tr_CO2h,CO2[c]  <=> CO2[h] ,-1000,1000
+Tr_CO2m,CO2[c]  <=> CO2[m] ,-1000,1000
+Tr_H2Oh,H2O[c]  <=> H2O[h] ,-1000,1000
+Tr_H2Om,H2O[c]  <=> H2O[m] ,-1000,1000
+Tr_H2Op,H2O[c]  -> H2O[p] ,0,0
+Tr_Hp,H[c]  -> H[p] ,0,0
+Tr_NH41,NH4[c]  <=> NH4[h] ,-1000,1000
+Tr_NH42,NH4[c]  <=> NH4[m] ,-1000,1000
+Tr_H2S1,H2S[c]  <=> H2S[h] ,-1000,1000
+Tr_H2S2,H2S[c]  <=> H2S[m] ,-1000,1000
+Tr_AC1,AC[c]  <=> AC[h] ,-1000,1000
+Tr_AC2,AC[c]  <=> AC[m] ,-1000,1000
+Tr_Pyr1,Pyr[c]  <=> Pyr[h] ,-1000,1000
+Tr_Pyr2,Pyr[c]  -> Pyr[m] ,19.8,19.8
+Tr_Pyr3,Pyr[c]  <=> Pyr[p] ,-1000,1000
+Tr_GCA2,GCA[c]  -> GCA[p] ,0,0
+Tr_GCEA2,GCEA[c]  -> GCEA[p] ,0,0
+Tr_Mal,Mal[c]  -> Mal[p] ,0,0
+Tr_OAA,OAA[c]  <=> OAA[p] ,-1000,1000
+Tr_KG,KG[c]  <=> KG[p] ,-1000,1000
+Tr_Ala1,Ala[c]  <=> Ala[p] ,-1000,1000
+Tr_Arg1,Arg[c]  -> Arg[p] ,0,0
+Tr_Asn1,Asn[c]  -> H[p] + Asn[p] ,0,0
+Tr_Asp,Asp[c]  -> Asp[p] ,0,0
+Tr_Cys,Cys[c]  -> Cys[p] ,0,0
+Tr_Glu1,Glu[c]  <=> Glu[p] ,-1000,1000
+Tr_Gln,Gln[c]  -> H[p] + Gln[p] ,0,0
+Tr_Gly,Gly[c]  -> Gly[p] ,0,0
+Tr_His1,His[c]  -> His[p] ,0,0
+Tr_Ile1,Ile[c]  -> Ile[p] ,0,0
+Tr_Leu1,Leu[c]  -> Leu[p] ,0,0
+Tr_Lys1,Lys[c]  -> Lys[p] ,0,0
+Tr_Met1,Met[c]  -> Met[p] ,0,0
+Tr_Phe1,Phe[c]  -> Phe[p] ,0,0
+Tr_Pro1,Pro[c]  -> Pro[p] ,0,0
+Tr_Ser1,Ser[c]  -> Ser[p] ,0,0
+Tr_Thr1,Thr[c]  -> Thr[p] ,0,0
+Tr_Trp1,Trp[c]  -> Trp[p] ,0,0
+Tr_Tyr1,Tyr[c]  -> Tyr[p] ,0,0
+Tr_Val1,Val[c]  -> Val[p] ,0,0
+Tr_Ala2,Ala[h]  -> Ala[c] ,0,1000
+Tr_Arg2,Arg[h]  -> Arg[c] ,0,0
+Tr_Asn2,Asn[c]  -> H[h] + Asn[h] ,0,0
+Tr_Asn3,Asn[c]  -> Asn[m] ,0,0
+Tr_Glu2,Glu[c]  -> Glu[h] ,0,1000
+Tr_His2,His[h]  -> His[c] ,0,0
+Tr_His3,His[c]  -> His[m] ,0,0
+Tr_Ile2,Ile[h]  -> Ile[c] ,0,0
+Tr_Ile3,Ile[c]  -> Ile[m] ,0,0
+Tr_Leu2,Leu[h]  -> Leu[c] ,0,0
+Tr_Leu3,Leu[c]  -> Leu[m] ,0,0
+Tr_Lys2,Lys[h]  -> Lys[c] ,0,0
+Tr_Met2,Met[c]  -> Met[h] ,0,0
+Tr_Met3,Met[c]  -> Met[m] ,0,0
+Tr_Phe2,Phe[h]  -> Phe[c] ,0,0
+Tr_Phe3,Phe[c]  -> Phe[m] ,0,0
+Tr_Pro2,Pro[c]  -> Pro[h] ,0,0
+Tr_Ser2,Ser[h]  -> Ser[c] ,0,0
+Tr_Ser3,Ser[c]  -> Ser[m] ,0,1000
+Tr_Thr2,Thr[h]  -> Thr[c] ,0,0
+Tr_Thr3,Thr[c]  -> Thr[m] ,0,0
+Tr_Trp2,Trp[h]  -> Trp[c] ,0,0
+Tr_Trp3,Trp[c]  -> Trp[m] ,0,0
+Tr_Tyr2,Tyr[h]  -> Tyr[c] ,0,0
+Tr_Tyr3,Tyr[c]  -> Tyr[m] ,0,0
+Tr_Val2,Val[h]  -> Val[c] ,0,0
+Tr_Val3,Val[c]  -> Val[m] ,0,0
+Si_H, <=> H[c] ,-1000,1000
+Im_hnu, -> hnu[h] ,0,1000
+Im_CO2, -> CO2[c] ,99,99
+Im_H2O, -> H2O[c] ,0,1000
+Im_Pi,3 ATP[c] + 3 H2O[c]  -> 2 H[h] + Pi[h] + 3 ADP[c] + 3 Pi[c] ,0,0
+Im_NO3,2 ATP[c] + 2 H2O[c]  -> 2 ADP[c] + 2 H[c] + 2 Pi[c] + NO3[c] ,0,1000
+Im_NH4, -> NH4[c] ,0,1000
+Im_SO4,3 ATP[c] + 3 H2O[c]  -> 3 ADP[c] + 3 H[c] + 3 Pi[c] + SO4[c] ,0,1000
+Im_H2S, -> H2S[c] ,0,0
+Ex_O2,O2[c]  -> ,0,1000
+Ex_Ala_c,Ala[c]  -> ,0,0
+Ex_Ala_h,Ala[h]  -> ,0,0
+Ex_Ala_m,Ala[m]  -> ,0,0
+Ex_Ala_p,Ala[p]  -> ,0,0
+Ex_Arg_c,Arg[c]  -> ,0,0
+Ex_Arg_h,Arg[h]  -> ,0,0
+Ex_Arg_m,Arg[m]  -> ,0,0
+Ex_Arg_p,Arg[p]  -> ,0,0
+Ex_Asn_c,Asn[c]  -> ,0,0
+Ex_Asn_h,Asn[h]  -> ,0,0
+Ex_Asn_m,Asn[m]  -> ,0,0
+Ex_Asn_p,Asn[p]  -> ,0,0
+Ex_Asp_c,Asp[c]  -> ,0,1000
+Ex_Asp_h,Asp[h]  -> ,0,0
+Ex_Asp_m,Asp[m]  -> ,0,0
+Ex_Asp_p,Asp[p]  -> ,0,1000
+Ex_Cys_c,Cys[c]  -> ,0,0
+Ex_Cys_h,Cys[h]  -> ,0,0
+Ex_Cys_m,Cys[m]  -> ,0,1000
+Ex_Cys_p,Cys[p]  -> ,0,0
+Ex_Gln_c,Gln[c]  -> ,0,0
+Ex_Gln_h,Gln[h]  -> ,0,0
+Ex_Gln_m,Gln[m]  -> ,0,0
+Ex_Gln_p,Gln[p]  -> ,0,0
+Ex_Glu_c,Glu[c]  -> ,0,0
+Ex_Glu_h,Glu[h]  -> ,0,0
+Ex_Glu_m,Glu[m]  -> ,0,0
+Ex_Glu_p,Glu[p]  -> ,0,0
+Ex_Gly_c,Gly[c]  -> ,0,0
+Ex_Gly_h,Gly[h]  -> ,0,0
+Ex_Gly_m,Gly[m]  -> ,0,0
+Ex_Gly_p,Gly[p]  -> ,0,0
+Ex_His_c,His[c]  -> ,0,0
+Ex_His_h,His[h]  -> ,0,0
+Ex_His_m,His[m]  -> ,0,0
+Ex_His_p,His[p]  -> ,0,0
+Ex_Ile_c,Ile[c]  -> ,0,0
+Ex_Ile_h,Ile[h]  -> ,0,0
+Ex_Ile_m,Ile[m]  -> ,0,0
+Ex_Ile_p,Ile[p]  -> ,0,0
+Ex_Leu_c,Leu[c]  -> ,0,0
+Ex_Leu_h,Leu[h]  -> ,0,0
+Ex_Leu_m,Leu[m]  -> ,0,0
+Ex_Leu_p,Leu[p]  -> ,0,0
+Ex_Lys_c,Lys[c]  -> ,0,0
+Ex_Lys_h,Lys[h]  -> ,0,0
+Ex_Lys_m,Lys[m]  -> ,0,0
+Ex_Lys_p,Lys[p]  -> ,0,0
+Ex_Met_c,Met[c]  -> ,0,0
+Ex_Met_h,Met[h]  -> ,0,0
+Ex_Met_m,Met[m]  -> ,0,0
+Ex_Met_p,Met[p]  -> ,0,0
+Ex_Phe_c,Phe[c]  -> ,0,0
+Ex_Phe_h,Phe[h]  -> ,0,0
+Ex_Phe_m,Phe[m]  -> ,0,0
+Ex_Phe_p,Phe[p]  -> ,0,0
+Ex_Pro_c,Pro[c]  -> ,0,0
+Ex_Pro_h,Pro[h]  -> ,0,0
+Ex_Pro_m,Pro[m]  -> ,0,0
+Ex_Pro_p,Pro[p]  -> ,0,0
+Ex_Ser_c,Ser[c]  -> ,0,0
+Ex_Ser_h,Ser[h]  -> ,0,0
+Ex_Ser_m,Ser[m]  -> ,0,0
+Ex_Ser_p,Ser[p]  -> ,0,0
+Ex_Thr_c,Thr[c]  -> ,0,0
+Ex_Thr_h,Thr[h]  -> ,0,0
+Ex_Thr_m,Thr[m]  -> ,0,0
+Ex_Thr_p,Thr[p]  -> ,0,0
+Ex_Trp_c,Trp[c]  -> ,0,0
+Ex_Trp_h,Trp[h]  -> ,0,0
+Ex_Trp_m,Trp[m]  -> ,0,0
+Ex_Trp_p,Trp[p]  -> ,0,0
+Ex_Tyr_c,Tyr[c]  -> ,0,0
+Ex_Tyr_h,Tyr[h]  -> ,0,0
+Ex_Tyr_m,Tyr[m]  -> ,0,0
+Ex_Tyr_p,Tyr[p]  -> ,0,0
+Ex_Val_c,Val[c]  -> ,0,0
+Ex_Val_h,Val[h]  -> ,0,0
+Ex_Val_m,Val[m]  -> ,0,0
+Ex_Val_p,Val[p]  -> ,0,0
+Ex_starch,starch3[h]  -> ,0,0
+Ex_Glc,Glc[c]  -> ,0,0
+Ex_Frc,Frc[c]  -> ,0,0
+Ex_Suc,Suc[c]  -> ,0,0
+Ex_cellulose,cellulose3[c]  -> ,0,0
+Ex_Mas,Mas[c]  -> ,0,0
+Ex_MACP,M-ACP[h]  -> H[h] + ACP[h] ,0,1000
+Ex_Tre,Tre[c]  -> ,0,0
+NGAM_c,ATP[c] + H2O[c]  -> ADP[c] + H[c] + Pi[c] ,0,0
+NGAM_h,H2O[h] + ATP[h]  -> H[h] + ADP[h] + Pi[h] ,0,0
+NGAM_m,H2O[m] + ATP[m]  -> H[m] + ADP[m] + Pi[m] ,0,0
+Bio_AA,Gln[c] + Asp[c] + Glu[c] + Asn[c] + Ser[c] + Cys[c] + Thr[c] + Gly[c] + Met[c] + Pro[c] + Ala[c] + Arg[c] + Lys[c] + His[c] + Ile[c] + Leu[c] + Phe[c] + Trp[c] + Tyr[c] + Val[c]  -> ,0,0
+Bio_CLim,227.347 starch2[h] + 2.27742 Mas[c] + 33.8494 Glc[c] + 0.58559 ATP[c] + 0.61307 UTP[c] + 45.3982 Suc[c] + 14.7742 Frc[c] + 1.15818 Tre[c] + 363.883 cellulose2[c] + 1.30199 SCA[m] + 77.5839 Fum[m] + 38.112 Mal[m] + 0.31189 SA[h] + 779.97 M-ACP[h] + 14.6073 Orn[h] + 45.7267 Gln[c] + 90.6841 Asp[c] + 103.376 Glu[c] + 61.8204 Asn[c] + 132.782 Ser[c] + 27.9121 Cys[c] + 0.15305 GABA[c] + 125.429 Thr[c] + 245.77 Gly[c] + 30.3798 Met[c] + 5.53164 urea[m] + 96.8832 Pro[c] + 0.49638 CTP[c] + 0.40478 GTP[c] + 0.68091 dATP[c] + 0.40366 dCTP[c] + 0.37141 dGTP[c] + 0.69281 dTTP[c] + 207.461 Ala[c] + 64.1977 Arg[c] + 92.8976 Lys[c] + 29.8197 His[c] + 80.5717 Ile[c] + 142.422 Leu[c] + 59.6508 Phe[c] + 15.0859 Trp[c] + 42.3346 Tyr[c] + 131.213 Val[c]  -> 2673.89 H[h] + 779.97 ACP[h] ,0,0
+Bio_NLim,335.543 starch2[h] + 5.37965 Mas[c] + 23.5392 Glc[c] + 0.62086 ATP[c] + 0.65 UTP[c] + 87.0151 Suc[c] + 10.6691 Frc[c] + 2.82436 Tre[c] + 363.883 cellulose2[c] + 1.62992 SCA[m] + 11.5874 Fum[m] + 10.8986 Mal[m] + 0.19059 SA[h] + 826.957 M-ACP[h] + 9.64682 Orn[h] + 84.1204 Gln[c] + 154.489 Asp[c] + 176.895 Glu[c] + 110.85 Asn[c] + 224.023 Ser[c] + 47.3624 Cys[c] + 0.58323 GABA[c] + 204.616 Thr[c] + 415.158 Gly[c] + 51.8182 Met[c] + 10.3653 urea[m] + 164.003 Pro[c] + 0.52628 CTP[c] + 0.42916 GTP[c] + 0.72193 dATP[c] + 0.42798 dCTP[c] + 0.39378 dGTP[c] + 0.73455 dTTP[c] + 351.016 Ala[c] + 142.535 Arg[c] + 159.107 Lys[c] + 50.5994 His[c] + 136.842 Ile[c] + 241.743 Leu[c] + 101.656 Phe[c] + 26.6481 Trp[c] + 71.7365 Tyr[c] + 222.618 Val[c]  -> 5581.92 H[h] + 826.957 ACP[h] ,0,0
+Bio_opt,294.862 starch2[h] + 2.60958 Mas[c] + 18.4787 Glc[c] + 0.58559 ATP[c] + 0.61307 UTP[c] + 30.6684 Suc[c] + 12.0349 Frc[c] + 0.57736 Tre[c] + 363.883 cellulose2[c] + 0.98709 SCA[m] + 67.2073 Fum[m] + 50.9964 Mal[m] + 0.37924 SA[h] + 779.97 M-ACP[h] + 1.58654 Orn[h] + 51.2643 Gln[c] + 101.038 Asp[c] + 116.394 Glu[c] + 70.5431 Asn[c] + 147.499 Ser[c] + 31.1176 Cys[c] + 0.09401 GABA[c] + 136.683 Thr[c] + 273.483 Gly[c] + 33.615 Met[c] + 2.84043 urea[m] + 108.037 Pro[c] + 0.49638 CTP[c] + 0.40478 GTP[c] + 0.68091 dATP[c] + 0.40366 dCTP[c] + 0.37141 dGTP[c] + 0.69281 dTTP[c] + 230.671 Ala[c] + 74.6825 Arg[c] + 103.594 Lys[c] + 33.2443 His[c] + 89.8269 Ile[c] + 158.771 Leu[c] + 66.6617 Phe[c] + 16.871 Trp[c] + 47.0292 Tyr[c] + 146.269 Val[c]  -> 3125.54 H[h] + 779.97 ACP[h] ,0,0
+CyclicE,PQ[h] + 2 H[h] + 2 Fdrd[h]  -> PQH2[h] + 2 Fdox[h] ,0,1000
+Mal_Store,Mal[c]  -> ,1.08,1.32
+Fum_Store,Fum[c]  -> ,0,0
+Starch_Store,starch1[h]  -> ,3.78,4.62
